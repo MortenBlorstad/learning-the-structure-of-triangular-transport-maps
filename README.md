@@ -50,13 +50,13 @@ uv run python -m experiments.uci.make_tables
 SSTM installs on its own, without the experiments. It needs only numpy, scipy and torch.
 
 ```bash
-uv add "sstm @ git+https://github.com/mortenblorstad/learning-the-structure-of-triangular-transport-maps"
+uv add "sstm @ git+https://github.com/MortenBlorstad/learning-the-structure-of-triangular-transport-maps"
 ```
 
 or 
 
 ```bash
-pip install git+https://github.com/mortenblorstad/learning-the-structure-of-triangular-transport-maps
+pip install git+https://github.com/MortenBlorstad/learning-the-structure-of-triangular-transport-maps
 ```
 
 Example usage:
