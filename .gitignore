@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+dist/
+*.egg-info/
+
+# macOS
+.DS_Store
+
+# Datasets: downloaded, not redistributed.
+# UCI: see experiments/uci/README.md   Sachs: see experiments/sachs/data/README.md
+experiments/uci/data/
+experiments/sachs/data/*
+!experiments/sachs/data/README.md
+
+# Results: run outputs, figures and tables are all generated, none are tracked.
+# See the README for how to recompute them.
+results/

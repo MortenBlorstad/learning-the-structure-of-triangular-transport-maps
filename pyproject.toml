@@ -1,0 +1,39 @@
+[project]
+name = "sstm"
+version = "0.1.0"
+readme = "README.md"
+requires-python = "==3.13.*"
+# Just what the SSTM model itself needs, so `pip install git+<this repo>` stays light.
+# Everything the experiments need is in the dev group below (uv sync installs it).
+dependencies = [
+  "numpy>=2.3.1",
+  "scipy>=1.16.0",
+  "torch>=2.7.1",
+]
+
+[dependency-groups]
+dev = [
+  "matplotlib>=3.10.3",
+  "pandas>=2.3.1",
+  "scikit-learn>=1.7.0",
+  "pyyaml>=6.0",
+  "igraph",
+  "networkx",                 # GNF's acyclicity post-processing
+  "nflows>=0.14",             # MAF / RQ-NSF(AR) baselines
+  "umnn>=1.71",               # GNF's normalizer
+  "notears @ git+https://github.com/xunzheng/notears.git@4a9ab19fe502e392503da331773c5223d82d3666",
+  "pytest>=7.0.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["triangularmap", "distributions"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
