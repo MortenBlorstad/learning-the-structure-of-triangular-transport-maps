@@ -16,7 +16,7 @@ uv sync
 
 The synthetic experiments generate their own data. The real-data experiments need one
 download. UCI (POWER, GAS, HEPMASS, MINIBOONE) is described in
-`experiments/uci/README.md`, Sachs in `experiments/sachs/data/README.md`.
+`experiments/uci/README.md`, Sachs in `experiments/sachs/README.md`.
 
 ## Run an experiment
 

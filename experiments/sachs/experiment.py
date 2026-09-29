@@ -2,8 +2,9 @@
 
 The synthetic model set (learned / random / oracle / two_stage + MAF / NSF) on the
 pooled 7,466 x 11 continuous Sachs matrix, with the 20-edge consensus network as the
-reference graph (fetched once per machine into experiments/sachs/data/; see README.md there
-for the curl commands -- the files are deliberately not committed). The oracle
+reference graph (fetched once per machine into experiments/sachs/data/; see
+experiments/sachs/README.md for the curl commands -- the files are deliberately not
+committed). The oracle
 fixes the reference graph; two_stage estimates one with NOTEARS-MLP (reproduction anchor:
 SHD ~ 16, ~13 edges, arXiv:1909.13189).
 
@@ -17,7 +18,6 @@ the synthetic per-seed data draw. No true density exists, so rows carry no nll_t
 omits them when nll_true is None); structure metrics are measured against the reference.
 
 Run:  uv run python -m experiments.runner.launch --experiment sachs [--select subset=obs853]
-Cells: sachs_{subset}_{model}_seed{k}  (2 subsets x 6 models x 5 seeds = 60).
 """
 from __future__ import annotations
 
@@ -49,7 +49,7 @@ def load_sachs(subset: str = "pooled"):
     if not data_path.exists():
         raise FileNotFoundError(
             f"Sachs data not found in {DATA_DIR} -- it is not committed. "
-            "Run the curl commands in experiments/sachs/data/README.md.")
+            "Run the curl commands in experiments/sachs/README.md.")
     header = data_path.open().readline().split()
     assert header == COLUMNS, f"column drift: {header}"
     X = np.loadtxt(data_path, skiprows=1, dtype=np.float32)
