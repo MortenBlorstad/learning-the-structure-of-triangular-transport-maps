@@ -4,6 +4,11 @@ Code for the paper. **SSTM** (Self-Structuring Transport Maps) is a monotone tri
 transport map that learns the variable ordering and the sparsity pattern jointly with the
 map, in a single optimization. The model is `triangularmap/sstm.py`.
 
+
+<p align="center">
+  <img src="assets/overview.png" alt="Overview of SSTM" width="700">
+</p>
+
 ## Install
 
 Python 3.13, managed with [uv](https://docs.astral.sh/uv/). `uv.lock` pins every dependency.

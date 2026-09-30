@@ -9,6 +9,9 @@ dist/
 # macOS
 .DS_Store
 
+# Editor
+.vscode/
+
 # Datasets: downloaded, not redistributed.
 # UCI: see experiments/uci/README.md   Sachs: see experiments/sachs/README.md
 experiments/uci/data/
@@ -17,3 +20,6 @@ experiments/sachs/data/
 # Results: run outputs, figures and tables are all generated, none are tracked.
 # See the README for how to recompute them.
 results/
+
+# Figure sources: assets/ keeps the built figures, assets/code/ builds them.
+assets/code/
